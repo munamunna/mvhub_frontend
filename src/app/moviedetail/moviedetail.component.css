@@ -1,0 +1,18 @@
+.body {
+    background-color: #f8f9fa;
+}
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #f8f9fa;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+
+.poster-image {
+max-width: 200px;
+height: auto;
+}
+

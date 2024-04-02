@@ -1,0 +1,86 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{{movie.poster_image}}" class="" alt="Movie Poster">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Title :{{movie.name}}</h5>
+                    <p class="card-text">Language :{{movie.language}}</p>
+                    <p class="card-text">Year :{{movie.year}}</p>
+                    <p class="card-text">Genre :{{movie.genres}}</p>
+                    <p class="card-text">Rating :{{movie.avg_rating}}</p>
+                    <p class="card-text">Runtime :{{movie.runtime}}</p>
+                    <p class="card-text">Description :{{movie.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- modal start -->
+<div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+Add Review
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Review Form</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <form  [formGroup]="reviewForm" (ngSubmit)="addReview()">
+    <div class="modal-body">
+      
+
+        <div class="mb-2">
+            <input type="text" class="form-control" placeholder="Type your Review" formControlName="comment">
+        </div>
+        <div class="mb-2">
+            <input type="number" class="form-control" placeholder="Add your Rating" formControlName="rating">
+        </div>
+
+    
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary">Save changes</button>
+
+    
+    </div>
+
+</form>
+  </div>
+</div>
+</div>
+<!-- modal end -->
+
+
+
+    <div class="card mt-4 ">
+        <div class="card-body">
+            <h5 class="card-title">User Reviews</h5>
+            <div class="media mt-3 border shadow p-3" *ngFor="let r of movie.reviews">
+                <div class="media-body">
+                  <h6 class="mt-0">{{ r.user }}</h6>
+                  <p>{{ r.comment }}</p>
+                  <p>{{ r.rating }}</p>
+                </div>
+              </div> 
+              
+            <!-- Add more user reviews here -->
+         </div>
+    </div>
+
+    
+
+   

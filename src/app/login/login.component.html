@@ -1,0 +1,52 @@
+<div class="body-cls">
+    <div class="container " >
+      <div class="card" >
+        <div class="row g-0" >
+          <div class="" >
+            <div class="h-100 d-flex justify-content-center align-items-center">
+              <form action="" [formGroup]="loginForm" (ngSubmit)="SignIn()">
+                <div class="py-4 px-3">
+                  <h4>SignIn</h4>
+                  <div class="row g-2 mt-1">
+                    <div class="col-md-12">
+                      <div class="input-field">
+                        <input class="form-control" id="input1" required formControlName="username"/>
+                        <label for="input1">userName</label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row mt-2 mb-2">
+                    <div class="col-md-12">
+                      <div class="input-field">
+                        <input class="form-control" id="input4"  type="password" required formControlName="password"/>
+                        <label for="input4">Password</label>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="">Password must be atleast 8 characters</span>
+                  <div class="row mt-2">
+                    <div class="col-md-12">
+                      <button
+                        type="submit"
+                        class="btn btn-primary w-100 signup-button"
+                      >
+                        SignIn
+                      </button>
+                    </div>
+                  </div>
+                  <div class="member mt-1">
+                    <span>Already a member?</span>
+                    <a class="text-decoration-none" href="#" routerLink="/register">SignUp</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  

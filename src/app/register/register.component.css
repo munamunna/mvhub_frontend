@@ -1,0 +1,92 @@
+.body-cls{
+    
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.card{
+    background-image: url('../../assets/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+.card{
+    
+    border:none;
+    height:500px;
+    overflow:hidden;
+}
+
+.input-field{
+    position:relative;
+    margin-top:5px;
+}
+
+.input-field input{
+    height:50px;
+    outline:none !important;
+    border:2px solid #eee;
+   
+}
+
+.input-field input:focus{
+    box-shadow:none;
+    outline:none !important;
+}
+
+.input-field label{
+    position:absolute;
+    top:10px;
+    left:6px;
+    transition:all 0.5s;
+    /* background-color:#fff; */
+    padding:0px 10px;
+    border-radius:20px;
+    
+     
+}
+
+.input-field input:focus+label,
+.input-field input:valid+label
+{
+    position:absolute;
+    top:-10px;
+    left:6px;
+    font-size:13px;
+  
+}
+
+
+.signup-button{
+    height:50px;
+    font-size:19px;
+    text-transform:uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+.content{
+    display:flex;
+    color:#fff;
+    justify-content:center;
+    align-items:center;
+}
+
+.content h6{
+    text-align:left;
+}
+
+.content span{
+    font-size:12px;
+}
